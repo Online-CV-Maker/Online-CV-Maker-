@@ -1,0 +1,171 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Online CV Maker – Build a professional CV</title>
+<meta name="description" content="Build a job-ready CV with professional templates, live preview and PDF download. Online CV Maker, Mettu, Ethiopia.">
+<meta property="og:title" content="Online CV Maker"><meta property="og:description" content="Your Skills. Your Story. Your Future."><meta property="og:type" content="website">
+<style>
+:root{--navy:#0B1F3A;--blue:#2563EB;--gold:#F5B544;--err:#DC2626;--bg:#F3F6FA;--card:#fff;--tx:#1F2937;--mut:#586377;--bd:#dde3ec;--okt:#15803d;--plt:#8a5a00;--errt:#B91C1C;--r:14px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1424;--card:#12233d;--tx:#e8edf5;--mut:#a3b3c9;--bd:#25395a;--okt:#4ade80;--plt:#F5B544;--errt:#fca5a5;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a1424;--card:#12233d;--tx:#e8edf5;--mut:#a3b3c9;--bd:#25395a;--okt:#4ade80;--plt:#F5B544;--errt:#fca5a5;color-scheme:dark}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--bg)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--navy);z-index:40}
+a{color:var(--blue)}h1,h2,h3{line-height:1.2;margin:0 0 .5em}.mut{color:var(--mut)}
+.w{max-width:1100px;margin:auto;padding:0 18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:12px;border:1px solid transparent;font:inherit;font-weight:650;cursor:pointer;text-decoration:none;background:none;color:inherit}
+.btn.p{background:var(--blue);color:#fff}.btn.s{border-color:currentColor}.btn:disabled{opacity:.55;cursor:not-allowed}.btn.sm{min-height:36px;padding:0 12px;font-size:14px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:41;background:var(--navy);color:#fff}
+.nav .w{display:flex;align-items:center;gap:10px;min-height:60px}
+.brand{font-weight:800;color:#fff;text-decoration:none;margin-right:auto;display:flex;gap:8px;align-items:center}
+.nav nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--navy);padding:8px 18px 16px;flex-direction:column}
+.nav nav.open{display:flex}.nav nav a,.nav nav button{color:#fff;text-decoration:none;padding:12px 8px;background:none;border:0;font:inherit;text-align:left;cursor:pointer}
+.menu{width:44px;height:44px;border-radius:10px;border:1px solid #ffffff55;background:none;color:#fff;display:grid;place-items:center;cursor:pointer}
+@media(min-width:900px){.nav nav{display:flex;position:static;flex-direction:row;padding:0}.menu{display:none}}
+.hero{background:linear-gradient(160deg,var(--navy),#14305c);color:#fff;padding:48px 0}
+.hero .w{display:grid;gap:32px;align-items:center}@media(min-width:900px){.hero .w{grid-template-columns:1.1fr .9fr}}
+.hero h1{font-size:clamp(30px,5vw,48px)}.hero p{color:#cbd5e1;max-width:46ch}.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.hero .btn.s{color:#fff}
+.dev{border:8px solid #0f172a;border-radius:22px;background:#fff;max-width:300px;margin:auto;overflow:hidden;box-shadow:0 18px 40px #0006}
+.fitbox{overflow:hidden}.sec{padding:52px 0}.sec h2{font-size:clamp(24px,4vw,34px)}.ctr{text-align:center}
+.g{display:grid;gap:14px}@media(min-width:640px){.g.c3{grid-template-columns:repeat(2,1fr)}.g.c4{grid-template-columns:repeat(4,1fr)}}@media(min-width:900px){.g.c3{grid-template-columns:repeat(3,1fr)}}
+.g.c4{grid-template-columns:repeat(2,1fr)}.g.c3.k{grid-template-columns:1fr}@media(min-width:800px){.g.c3.k{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:18px;box-shadow:0 1px 3px #0b1f3a14}
+.card h3{font-size:18px;margin:12px 0 6px}.card p{margin:0 0 10px;color:var(--mut)}
+.ic{width:44px;height:44px;border-radius:12px;background:#2563eb1f;color:var(--blue);display:grid;place-items:center}
+.tag{font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;background:#16a34a24;color:var(--okt)}.tag.pl{background:#f5b54433;color:var(--plt)}
+.tc{padding:10px;text-align:left;cursor:pointer;font:inherit;color:inherit}.tc[aria-pressed=true]{border:2px solid var(--blue)}
+.tc .fitbox{aspect-ratio:3/4;border:1px solid var(--bd);border-radius:8px;margin-bottom:8px;pointer-events:none}
+.feat{border:2px solid var(--gold)}details{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 16px;margin-bottom:10px}summary{font-weight:650;cursor:pointer}
+footer{background:var(--navy);color:#cbd5e1;padding:36px 0}footer a,footer button{color:#fff;background:none;border:0;font:inherit;padding:6px 0;cursor:pointer;text-decoration:underline;display:block}
+footer .g{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+input,select,textarea{width:100%;min-height:44px;padding:10px 12px;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font:inherit}textarea{min-height:92px}
+fieldset{border:1px solid var(--bd);border-radius:12px;margin:12px 0;padding:4px 14px 14px}.err{color:var(--errt);font-size:14px}
+.bar{background:var(--navy);color:#fff;padding:10px 0}.bar .w{display:flex;justify-content:space-between;align-items:center;gap:8px}.bar .btn{color:#fff}
+.pr{height:6px;background:var(--bd)}.pr i{display:block;height:100%;background:var(--blue);transition:width .2s}
+.bl{display:grid;gap:18px;padding:18px 0}@media(min-width:900px){.bl{grid-template-columns:1fr 1fr}.pvw{position:sticky;top:12px;align-self:start}}.bl>*{min-width:0}
+.paper{background:#fff;border:1px solid var(--bd);box-shadow:0 6px 20px #0b1f3a22}
+.chips span{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--bd);border-radius:99px;padding:4px 6px 4px 12px;margin:0 6px 6px 0}
+.chips button{border:0;background:none;color:var(--errt);font-size:18px;cursor:pointer;min-width:28px;min-height:28px}
+dialog{max-width:520px;width:calc(100% - 32px);border:0;border-radius:var(--r);background:var(--card);color:var(--tx);padding:22px}dialog::backdrop{background:#0b1f3a99}
+#toast{position:fixed;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--navy);color:#fff;padding:12px 16px;border-radius:12px;z-index:60}
+.cv{width:794px;min-height:1123px;background:#fff;color:#1F2937;font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:44px 48px}
+.cv h1{font-size:2.1em;margin:0}.cv h2{font-size:1.1em;font-weight:500;margin:.2em 0;color:#475569}
+.cv header{display:flex;gap:18px;align-items:center;margin-bottom:14px}.cv header img{width:84px;height:84px;border-radius:50%;object-fit:cover}
+.cv .ct{font-size:.85em;color:#475569;word-break:break-word}
+.cv h3{font-size:.95em;letter-spacing:.06em;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #cbd5e1;text-transform:none}
+.cv .it{margin-bottom:10px;break-inside:avoid}.cv .dt{float:right;font-size:.85em;color:#64748b}.cv p{margin:.3em 0;white-space:pre-line}
+.cv .sk{display:flex;flex-wrap:wrap;gap:6px}.cv .sk span{background:#eef2f7;padding:2px 10px;border-radius:99px;font-size:.88em}
+.t-modern header{background:#0B1F3A;margin:-44px -48px 18px;padding:34px 48px}.t-modern h1{color:#fff}.t-modern h2,.t-modern .ct{color:#cbd5e1}.t-modern h3{color:#2563EB;border-color:#2563EB}
+.t-clean header{flex-direction:column;text-align:center}.t-clean h1{font-weight:400}.t-clean h3{color:#0B1F3A}
+.t-creative{border-left:12px solid #2563EB}.t-creative h1,.t-creative h3{color:#2563EB}.t-creative h3{border-bottom:3px solid #F5B544}.t-creative .sk span{background:#2563EB;color:#fff}
+.t-grad h1{color:#0B1F3A}.t-grad h3{background:#F3F6FA;border:0;border-left:4px solid #F5B544;padding:4px 8px}
+#print{display:none}
+@media print{@page{size:A4;margin:12mm}body>*{display:none!important}body>#print{display:block!important}body::before{display:none}.cv{width:auto;min-height:0;padding:0;zoom:1!important}.t-modern header{margin:0 0 14px;padding:22px 24px;border-radius:8px}.t-creative{padding-left:16px}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}.cv h3{break-after:avoid}}
+</style></head><body>
+<div id="site">
+<header class="nav"><div class="w"><a class="brand" href="#top"><svg width="26" height="26" viewBox="0 0 24 24" fill="var(--gold)"><circle cx="5" cy="5" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg>Online CV Maker</a>
+<nav id="nav" aria-label="Main"><a href="#top">Home</a><a href="#templates">CV Templates</a><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#about">About Us</a><a href="#contact">Contact</a><button data-dlg="login">Login</button></nav>
+<button class="btn p sm" data-open="1">Create My CV</button>
+<button class="menu" id="mb" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="5" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg></button></div></header>
+<main id="top">
+<section class="hero"><div class="w"><div><h1>Create a Professional CV. Open Doors to New Opportunities.</h1><p>Build a job-ready CV with professional templates, easy editing, and clean formatting. Present your skills and experience with confidence.</p><div class="row"><button class="btn p" data-open="1">Create My CV</button><a class="btn s" href="#templates">Explore Templates</a></div><p style="font-size:14px">Your Skills. Your Story. Your Future.</p></div>
+<div class="dev" aria-label="Sample CV on a phone"><div class="fitbox" id="hm" style="aspect-ratio:3/4"></div></div></div></section>
+<section class="sec" id="features"><div class="w"><h2 class="ctr">Everything you need to build your CV</h2><p class="ctr mut">Each feature is labelled with its real status in this version.</p><div class="g c3" id="fg"></div></div></section>
+<section class="sec" id="templates" style="background:var(--card)"><div class="w"><h2 class="ctr">CV templates</h2><p class="ctr mut">Pick a template, then add your details. You can switch any time. Previews use fictional data.</p><div class="g c4" id="tg"></div></div></section>
+<section class="sec"><div class="w"><h2 class="ctr">How it works</h2><div class="g c3 k"><div class="card"><h3>1. Choose a template</h3><p>Pick the layout that fits your career stage.</p></div><div class="card"><h3>2. Enter your information</h3><p>Fill in your personal and professional details step by step.</p></div><div class="card"><h3>3. Preview and download</h3><p>Check the live preview, then save it as a PDF.</p></div></div><div class="row" style="justify-content:center"><button class="btn p" data-open="1">Create My CV</button></div></div></section>
+<section class="sec" id="pricing" style="background:var(--card)"><div class="w"><h2 class="ctr">Pricing</h2><p class="ctr mut">Placeholder plans. Final prices and scope will be confirmed by the business owner.</p><div class="g c3 k" id="pg"></div></div></section>
+<section class="sec" id="faq"><div class="w" style="max-width:760px"><h2 class="ctr">Frequently asked questions</h2><div id="fq"></div></div></section>
+<section class="sec" id="about" style="background:var(--card)"><div class="w" style="max-width:760px"><h2>About Us</h2><p>Online CV Maker is a CV creation and career-document service based in Mettu, Ilubabor, Ethiopia, founded by Khalil Etana, an IT consultant. We help students, graduates and professionals present their qualifications clearly and professionally.</p></div></section>
+<section class="sec" id="contact"><div class="w" style="max-width:760px"><h2>Contact</h2><p class="mut">Email <a href="mailto:khaliletana641@gmail.com">khaliletana641@gmail.com</a> · <a href="tel:+251917077240">+251917077240</a> · Mettu, Ilubabor, Ethiopia</p>
+<form id="cf" class="card" novalidate><label for="cn">Name</label><input id="cn" name="n" autocomplete="name"><label for="ce">Email</label><input id="ce" name="e" type="email" autocomplete="email"><label for="cs">Subject</label><input id="cs" name="s"><label for="cm">Message</label><textarea id="cm" name="m"></textarea><p id="cst" class="err" role="alert"></p><button class="btn p" type="submit">Check message</button></form></div></section>
+</main>
+<footer><div class="w"><div class="g"><div><b style="color:#fff">Online CV Maker</b><p>Your Skills. Your Story. Your Future.</p></div><div><a href="#about">About Us</a><a href="#contact">Contact</a></div><div><button data-dlg="privacy">Privacy Policy</button><button data-dlg="terms">Terms &amp; Conditions</button><button data-dlg="refund">Refund Policy</button></div><div>khaliletana641@gmail.com<br>+251917077240<br>Mettu, Ilubabor, Ethiopia</div></div><p style="font-size:13px;margin-top:20px">© 2026 Online CV Maker</p></div></footer>
+</div>
+<div id="app" hidden><div class="bar"><div class="w"><button class="btn s sm" id="home">← Back to site</button><b id="st"></b></div></div><div class="pr"><i id="pb"></i></div>
+<div class="w"><div class="bl"><div><div id="form"></div><p id="err" class="err" role="alert"></p><div class="row"><button class="btn s" id="back">Back</button><button class="btn p" id="next">Next</button></div></div><div class="pvw"><b>Live preview</b><div class="paper fitbox" id="pv"></div></div></div></div></div>
+<dialog id="dlg"><div id="dc"></div><div class="row"><button class="btn p" id="dx">Close</button></div></dialog>
+<div id="toast" role="status" hidden></div><div id="print"></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const MAIL="khaliletana641@gmail.com";
+const TPL=[["modern","Modern Professional"],["clean","Simple & Clean"],["creative","Creative Portfolio"],["grad","Graduate & Entry-Level"]];
+const STEPS=["Template","Personal","Education","Experience","Skills","Projects & more","Preview & PDF"];
+const SEC={edu:{t:"Education",f:[["institution","Institution"],["qualification","Qualification"],["field","Field of study"],["start","Start date","month"],["end","End date","month"],["desc","Description","area"]]},
+exp:{t:"Work experience",f:[["employer","Employer"],["role","Job title"],["start","Start date","month"],["end","End date (blank = present)","month"],["resp","Responsibilities","area"],["ach","Achievements","area"]]},
+proj:{t:"Projects",f:[["name","Project name"],["link","Link (optional)","url"],["desc","Description","area"]]},
+cert:{t:"Certifications",f:[["name","Certification"],["issuer","Issuer"],["year","Year"]]},
+lang:{t:"Languages",f:[["name","Language"],["level","Level (e.g. Fluent)"]]}};
+const SAMPLE={p:{name:"Alex Sample",title:"Junior Software Developer",email:"alex@example.com",phone:"+251 900 000 000",loc:"Addis Ababa, Ethiopia",summary:"Recent graduate with hands-on web projects and a focus on clean, reliable code. (Fictional sample data.)"},edu:[{institution:"Sample University",qualification:"BSc",field:"Computer Science",start:"2020-09",end:"2024-07"}],exp:[{employer:"Sample Tech PLC",role:"Intern Developer",start:"2024-01",end:"2024-06",resp:"Built internal dashboards with React.\nFixed bugs and wrote tests."}],skills:[{n:"JavaScript",l:"Advanced"},{n:"React",l:"Intermediate"},{n:"SQL",l:""}],cert:[{name:"Sample Certificate",issuer:"Example Academy",year:"2024"}],lang:[{name:"English",level:"Fluent"}]};
+const IC=["M4 4h16v16H4z M4 9h16 M9 9v11","M12 20h9 M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z","M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z","M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z M12 9a3 3 0 100 6 3 3 0 000-6z","M12 3v12 M7 11l5 5 5-5 M4 21h16","M7 2h10v20H7z M11 18h2","M3 5h18v14H3z M3 6l9 7 9-7","M5 11h14v10H5z M8 11V7a4 4 0 018 0v4","M3 7h18v13H3z M3 7l3-4h12l3 4 M16 13h2"];
+const FEAT=[["Professional CV Templates","Four clean layouts for different career stages.",1],["Easy CV Builder","A guided 7-step form with add, edit and remove.",1],["AI Writing Assistance","Help wording your summary and experience.",0],["Live CV Preview","See changes in your CV as you type.",1],["PDF Download","Save an A4 PDF through your browser’s print dialog.",1],["Mobile-Friendly Design","Built for small screens first.",1],["Cover Letter Builder","Create cover letters tailored to a job.",0],["Secure User Accounts","Save CVs to an account and edit them later. Needs the backend (Stage 2).",0],["Ethiopian Payment Options","Telebirr and CBE Birr. Needs merchant credentials.",0]];
+const PLANS=[["Basic"],["Standard",1],["Premium"]];
+const FAQ=[["How do I create a CV?","Tap Create My CV, choose a template, fill in the steps, check the live preview, then download."],["Which templates are available?","Modern Professional, Simple & Clean, Creative Portfolio, and Graduate & Entry-Level."],["How do PDF downloads work?","Tap Download PDF, then choose “Save as PDF” in your browser’s print dialog. The result is an A4 text PDF."],["Can I register an account?","Not yet. Accounts need the backend, planned for the next stage. For now your CV is saved only in this browser."],["How much does it cost?","Prices are placeholders until the business owner confirms them. Building and downloading a CV is currently free."],["How is payment verified?","Payments are not available yet. Telebirr and CBE Birr will be accepted only after server-side verification with the provider."],["How do I request a refund?","See the Refund Policy in the footer, then email "+MAIL+" with your order ID and details."],["Is my personal data protected?","In this version your CV data stays in your browser and is not sent to a server. See the Privacy Policy."],["How do I contact support?","Email "+MAIL+" or call +251917077240."]];
+const LEGAL={privacy:["Privacy Policy","Your CV data currently stays in this browser’s local storage; this version sends nothing to a server. When accounts launch, we plan to collect your name, email, phone, location and CV details only to create CVs, process orders and support you. We do not sell personal data and never ask for bank PINs. You may request access, correction or deletion at "+MAIL+". No online system is perfectly secure."],
+terms:["Terms & Conditions","You are responsible for the accuracy of the information you submit. Package scope and prices are shown before an order is confirmed, and payments count only after technical verification. We help present your qualifications but do not guarantee interviews or jobs. These terms are governed by the laws of Ethiopia."],
+refund:["Refund Policy","Cancel before drafting starts for a full refund; a partial refund may apply after work begins. After delivery, refunds apply only if the result materially fails the selected package or has errors we cannot correct. Verified duplicate payments are refunded. Email "+MAIL+" with order ID, date, payment reference and details. We acknowledge claims within 3 business days and decide within 7."]};
+const NOTE="<p class=mut style=font-size:13px>Summary of the business documents. Have the full legal text reviewed before launch.</p>";
+const blank=()=>({tpl:"modern",p:{},edu:[],exp:[],skills:[],proj:[],cert:[],lang:[]});
+let cv,step=0;
+try{cv=Object.assign(blank(),JSON.parse(localStorage.getItem("ocv")))}catch(e){cv=blank()}
+function save(){try{localStorage.setItem("ocv",JSON.stringify(cv))}catch(e){toast("Could not save in this browser (storage full or blocked).")}}
+function toast(m){const t=$("#toast");t.textContent=m;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,3500)}
+const fd=v=>{if(!v)return"";const d=new Date(v+"-01");return isNaN(d)?esc(v):d.toLocaleDateString("en",{month:"short",year:"numeric"})};
+function cvHTML(d,t){const p=d.p||{},A=k=>(d[k]||[]).filter(e=>Object.values(e).some(v=>v));
+const rng=e=>[fd(e.start),e.end?fd(e.end):e.start?"Present":""].filter(Boolean).join(" – ");
+const S=(h,a,f)=>a.length?`<section><h3>${h}</h3>${a.map(f).join("")}</section>`:"",P=x=>x?`<p>${esc(x)}</p>`:"";
+const sec={edu:S("Education",A("edu"),e=>`<div class="it"><span class="dt">${rng(e)}</span><b>${esc(e.qualification)}${e.field?", "+esc(e.field):""}</b><div>${esc(e.institution)}</div>${P(e.desc)}</div>`),
+exp:S("Work Experience",A("exp"),e=>`<div class="it"><span class="dt">${rng(e)}</span><b>${esc(e.role)}</b><div>${esc(e.employer)}</div>${P(e.resp)}${e.ach?P("Achievements: "+e.ach):""}</div>`),
+skills:A("skills").length?`<section><h3>Skills</h3><div class="sk">${A("skills").map(s=>`<span>${esc(s.n)}${s.l?" · "+esc(s.l):""}</span>`).join("")}</div></section>`:"",
+proj:S("Projects",A("proj"),e=>`<div class="it"><b>${esc(e.name)}</b> <small>${esc(e.link)}</small>${P(e.desc)}</div>`),
+cert:S("Certifications",A("cert"),e=>`<div class="it"><span class="dt">${esc(e.year)}</span><b>${esc(e.name)}</b> ${esc(e.issuer)}</div>`),
+lang:S("Languages",A("lang"),e=>`<div class="it"><b>${esc(e.name)}</b>${e.level?" · "+esc(e.level):""}</div>`)};
+const ord=t==="grad"?["edu","skills","proj","cert","exp","lang"]:["exp","edu","skills","proj","cert","lang"];
+const ph=/^data:image\//.test(p.photo||"")?`<img src="${esc(p.photo)}" alt="">`:"";
+const ct=[p.email,p.phone,p.loc,p.linkedin,p.portfolio].filter(Boolean).map(esc).join(" · ");
+return `<article class="cv t-${t}"><header>${ph}<div><h1>${esc(p.name||"Your Name")}</h1><h2>${esc(p.title)}</h2><div class="ct">${ct}</div></div></header>${p.summary?`<section><h3>Profile</h3><p>${esc(p.summary)}</p></section>`:""}${ord.map(k=>sec[k]).join("")}</article>`}
+function fit(){$$(".fitbox").forEach(b=>{const c=b.firstElementChild;if(c&&b.clientWidth)c.style.zoom=b.clientWidth/794})}
+addEventListener("resize",fit);
+const prev=()=>{$("#pv").innerHTML=cvHTML(cv,cv.tpl);fit()};
+const tplCards=sel=>TPL.map(([id,n])=>`<button class="card tc" data-tpl="${id}" aria-pressed="${sel===id}"><div class="fitbox">${cvHTML(SAMPLE,id)}</div><b>${n}</b></button>`).join("");
+const inp=(l,a,v,t)=>`<label>${l}${t==="area"?`<textarea ${a}>${esc(v)}</textarea>`:`<input type="${t||"text"}" ${a} value="${esc(v)}">`}</label>`;
+const list=s=>{const c=SEC[s];return `<h3>${c.t}</h3>`+(cv[s].map((e,i)=>`<fieldset><legend>${c.t} ${i+1}</legend>${c.f.map(([k,l,t])=>inp(l,`data-s="${s}" data-i="${i}" data-k="${k}"`,e[k],t)).join("")}<button type="button" class="btn s sm" style="margin-top:12px" data-act="rm" data-s="${s}" data-i="${i}">Remove</button></fieldset>`).join("")||`<p class="mut">Nothing added yet. Tap the button below to add one.</p>`)+`<button type="button" class="btn s" data-act="add" data-s="${s}">Add ${c.t.toLowerCase()}</button>`};
+const PF=[["name","Full name"],["title","Professional title"],["email","Email","email"],["phone","Phone","tel"],["loc","City and country"],["summary","Professional summary","area"],["linkedin","LinkedIn URL (optional)","url"],["portfolio","Portfolio URL (optional)","url"]];
+const forms=[()=>`<h3>Choose a template</h3><div class="g c4" style="grid-template-columns:repeat(2,1fr)">${tplCards(cv.tpl)}</div>`,
+()=>`<h3>Personal information</h3>${PF.map(([k,l,t])=>inp(l,`data-s="p" data-k="${k}"`,cv.p[k],t)).join("")}<label>Profile photo (optional)<input type="file" id="ph" accept="image/*"></label>${cv.p.photo?`<button type="button" class="btn s sm" data-act="nophoto">Remove photo</button>`:""}`,
+()=>list("edu"),()=>list("exp"),
+()=>`<h3>Skills</h3><div class="chips">${cv.skills.map((s,i)=>`<span>${esc(s.n)}${s.l?" · "+esc(s.l):""}<button type="button" aria-label="Remove ${esc(s.n)}" data-act="rm" data-s="skills" data-i="${i}">×</button></span>`).join("")||`<p class="mut">No skills yet.</p>`}</div>${inp("Skill",'id="sn"',"")}<label>Level (optional)<select id="sl"><option value="">Not set</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>Expert</option></select></label><button type="button" class="btn s" style="margin-top:12px" data-act="addskill">Add skill</button>`,
+()=>list("proj")+list("cert")+list("lang"),
+()=>`<h3>Download your CV</h3><p>Tap Download PDF, then choose <b>Save as PDF</b> in the print dialog. The PDF is created by your browser’s print engine (real text, A4, page breaks kept). Check every page before you send it.</p><div class="row"><button type="button" class="btn p" data-act="pdf">Download PDF</button><button type="button" class="btn s" data-act="reset">Clear all my data</button></div><p class="mut" style="font-size:14px">Your CV is saved only in this browser. Accounts and cloud saving arrive in Stage 2.</p>`];
+function draw(){$("#st").textContent=`Step ${step+1} of 7 · ${STEPS[step]}`;$("#pb").style.width=(step+1)/7*100+"%";$("#form").innerHTML=forms[step]();$("#err").textContent="";$("#back").disabled=!step;$("#next").hidden=step===6;prev()}
+function valid(){const p=cv.p,e=[];if(!(p.name||"").trim())e.push("Enter your full name.");if(!/^\S+@\S+\.\S+$/.test(p.email||""))e.push("Enter a valid email address.");[["linkedin","LinkedIn"],["portfolio","Portfolio"]].forEach(([k,n])=>{if(p[k]&&!/^https?:\/\//i.test(p[k]))e.push(n+" URL must start with http:// or https://")});$("#err").innerHTML=e.map(x=>esc(x)).join("<br>");return!e.length}
+function openB(n){$("#site").hidden=true;$("#app").hidden=false;step=n;draw();scrollTo(0,0)}
+$("#form").addEventListener("input",e=>{const{s,i,k}=e.target.dataset;if(!s)return;(s==="p"?cv.p:cv[s][+i])[k]=e.target.value;save();prev()});
+$("#form").addEventListener("change",e=>{if(e.target.id!=="ph")return;const f=e.target.files[0];if(!f||!/^image\//.test(f.type))return toast("Choose an image file.");const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const c=document.createElement("canvas"),k=Math.min(1,240/Math.max(im.width,im.height));c.width=im.width*k;c.height=im.height*k;c.getContext("2d").drawImage(im,0,0,c.width,c.height);cv.p.photo=c.toDataURL("image/jpeg",.85);save();draw()};im.src=r.result};r.readAsDataURL(f)});
+$("#form").addEventListener("click",e=>{const b=e.target.closest("[data-act]");if(!b)return;const{act,s,i}=b.dataset;
+if(act==="add")cv[s].push({});else if(act==="rm")cv[s].splice(+i,1);else if(act==="nophoto")delete cv.p.photo;
+else if(act==="addskill"){const n=$("#sn").value.trim();if(!n)return toast("Type a skill name first.");cv.skills.push({n,l:$("#sl").value})}
+else if(act==="pdf"){$("#print").innerHTML=cvHTML(cv,cv.tpl);try{window.print()}catch(x){toast("Printing is blocked here. Open this page in Chrome and try again.")}return}
+else if(act==="reset"){if(!confirm("Delete all CV data saved in this browser?"))return;cv=blank();step=0}
+save();draw()});
+$("#next").onclick=()=>{if(step===1&&!valid())return;step++;draw();scrollTo(0,0)};
+$("#back").onclick=()=>{step--;draw();scrollTo(0,0)};
+$("#home").onclick=()=>{$("#app").hidden=true;$("#site").hidden=false;fit()};
+document.addEventListener("click",e=>{const t=e.target.closest("[data-tpl]");if(t){cv.tpl=t.dataset.tpl;save();if($("#site").hidden)draw();else openB(1);return}
+if(e.target.closest("[data-open]"))openB(0);const d=e.target.closest("[data-dlg]");if(d)dlg(d.dataset.dlg)});
+function dlg(k){$("#dc").innerHTML=k==="login"?"<h3>Login</h3><p>Accounts are not available yet. They need the backend and database planned for Stage 2, so there is nothing to log in to. Your CV is saved in this browser only.</p>":`<h3>${LEGAL[k][0]}</h3><p>${esc(LEGAL[k][1])}</p>${NOTE}`;$("#dlg").showModal()}
+$("#dx").onclick=()=>$("#dlg").close();
+$("#mb").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#mb").setAttribute("aria-expanded",o)};
+$("#nav").addEventListener("click",e=>{if(e.target.closest("a,button"))$("#nav").classList.remove("open")});
+$("#fg").innerHTML=FEAT.map(([t,d,ok],i)=>`<div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${IC[i]}"/></svg></div><h3>${t}</h3><p>${d}</p><span class="tag ${ok?"":"pl"}">${ok?"Available":"Planned"}</span></div>`).join("");
+$("#tg").innerHTML=tplCards(cv.tpl);$("#hm").innerHTML=cvHTML(SAMPLE,"modern");
+$("#pg").innerHTML=PLANS.map(([n,f])=>`<div class="card ${f?"feat":""}"><h3>${n}${f?' <span class="tag pl">Featured</span>':""}</h3><p><b style="font-size:22px;color:var(--tx)">Price to be confirmed</b></p><p>Placeholder plan. Package scope, revisions and turnaround will be set by the business owner.</p><button class="btn p" disabled>Payments not available yet</button></div>`).join("");
+$("#fq").innerHTML=FAQ.map(([q,a])=>`<details><summary>${q}</summary><p>${esc(a)}</p></details>`).join("");
+$("#cf").addEventListener("submit",e=>{e.preventDefault();const f=new FormData(e.target),n=f.get("n").trim(),m=f.get("e").trim(),s=f.get("s").trim(),b=f.get("m").trim(),o=$("#cst");
+if(!n||!/^\S+@\S+\.\S+$/.test(m)||!s||b.length<10){o.textContent="Fill every field, use a valid email, and write a message of at least 10 characters.";return}
+o.textContent="Not sent: the contact backend is not connected in this version. ";const a=document.createElement("a");a.href=`mailto:${MAIL}?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(b+"\n\n"+n+" ("+m+")")}`;a.textContent="Send it with your email app instead.";o.append(a)});
+fit();
+</script></body></html>
